@@ -102,7 +102,7 @@ def update_bullets(ai_settings,screen,ship,aliens,bullets,stats,score_board):
 def check_bullet_alien_collisons(ai_settings,screen,ship,aliens,bullets,stats,score_board):
     # 检查是否有子弹击中了外星人
     # 如果是这样，就删除相应的子弹和外星人
-    collisons=pygame.sprite.groupcollide(bullets,aliens,False,True)
+    collisons=pygame.sprite.groupcollide(bullets,aliens,True,True)
 
     if collisons:
         for aliens in collisons.values():
