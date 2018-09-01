@@ -13,14 +13,15 @@ def check_keydown_event(event,ai_settings,screen,ship,bullets,stats,aliens,score
     elif event.key==pygame.K_DOWN:
         ship.moving_down=True
     elif event.key==pygame.K_SPACE:
-        fire_bullet(ai_settings,screen,ship,bullets)
+        ai_settings.bullet_fire = True
+        #fire_bullet(ai_settings,screen,ship,bullets)
     elif event.key==pygame.K_q:
         sys.exit()
     elif event.key==pygame.K_p:
         if not stats.game_active:
             start_game(ai_settings,screen,stats,ship,aliens,bullets,score_board)
 
-def check_keyup_event(event,ship):
+def check_keyup_event(event,ship,ai_settings):
     if event.key==pygame.K_RIGHT:
         ship.moving_right=False
     elif event.key==pygame.K_LEFT:
@@ -29,6 +30,8 @@ def check_keyup_event(event,ship):
         ship.moving_up=False
     elif event.key==pygame.K_DOWN:
         ship.moving_down=False
+    elif event.key == pygame.K_SPACE:
+        ai_settings.bullet_fire = False
 
 def check_events(ai_settings,screen,stats,play_button,ship,aliens,bullets,score_board):
     # 监视键盘和鼠标事件
@@ -39,7 +42,7 @@ def check_events(ai_settings,screen,stats,play_button,ship,aliens,bullets,score_
         elif event.type==pygame.KEYDOWN:
             check_keydown_event(event,ai_settings,screen,ship,bullets,stats,aliens,score_board)
         elif event.type==pygame.KEYUP:
-            check_keyup_event(event,ship)
+            check_keyup_event(event,ship,ai_settings)
         elif event.type==pygame.MOUSEBUTTONDOWN:
             mouse_x,mouse_y=pygame.mouse.get_pos()
             check_play_button(ai_settings,screen,stats,play_button,ship,aliens,bullets,mouse_x,mouse_y,score_board)
@@ -90,6 +93,11 @@ def updata_screen(ai_settings,screen,stats,ship,back_ground,aliens,bullets,play_
 
 def update_bullets(ai_settings,screen,ship,aliens,bullets,stats,score_board):
     """更新子弹的位置，并删除已消失的子弹"""
+    # 发射子弹
+    ai_settings.bullet_fire_rate_cnt += 1
+    if ai_settings.bullet_fire and ai_settings.bullet_fire_rate_cnt >= ai_settings.bullet_fire_rate:
+        fire_bullet(ai_settings,screen,ship,bullets)
+        ai_settings.bullet_fire_rate_cnt = 0
     # 更新子弹的位置
     bullets.update()
     # 删除已消失的子弹
@@ -97,12 +105,11 @@ def update_bullets(ai_settings,screen,ship,aliens,bullets,stats,score_board):
         if bullet.rect.bottom <= 0 or bullet.rect.right<0 or bullet.rect.left>bullet.screen.get_width():
             bullets.remove(bullet)
     check_bullet_alien_collisons(ai_settings,screen,ship,aliens,bullets,stats,score_board)
-    
 
 def check_bullet_alien_collisons(ai_settings,screen,ship,aliens,bullets,stats,score_board):
     # 检查是否有子弹击中了外星人
     # 如果是这样，就删除相应的子弹和外星人
-    collisons=pygame.sprite.groupcollide(bullets,aliens,True,True)
+    collisons=pygame.sprite.groupcollide(bullets,aliens,False,True)
 
     if collisons:
         for aliens in collisons.values():
@@ -125,12 +132,18 @@ def fire_bullet(ai_settings,screen,ship,bullets):
         new_bullet=Bullet(ai_settings,screen,ship)
         new_bullet.direction="UP"
         bullets.add(new_bullet)
-        #new_bullet=Bullet(ai_settings,screen,ship)
-        #new_bullet.direction="RIGHT"
-        #bullets.add(new_bullet)
-        #new_bullet=Bullet(ai_settings,screen,ship)
-        #new_bullet.direction="LEFT"
-        #bullets.add(new_bullet)
+        new_bullet=Bullet(ai_settings,screen,ship)
+        new_bullet.direction="RIGHT"
+        bullets.add(new_bullet)
+        new_bullet=Bullet(ai_settings,screen,ship)
+        new_bullet.direction="LEFT"
+        bullets.add(new_bullet)
+        new_bullet=Bullet(ai_settings,screen,ship)
+        new_bullet.direction="RIGHTUP"
+        bullets.add(new_bullet)
+        new_bullet=Bullet(ai_settings,screen,ship)
+        new_bullet.direction="LEFTUP"
+        bullets.add(new_bullet)
 
 
 def get_number_alien_x(ai_settings,alien_width):

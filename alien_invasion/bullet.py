@@ -32,10 +32,22 @@ class Bullet(Sprite):
             self.xcenter+=self.speed_factor
             self.rect.centerx=self.xcenter
             self.rect.y=self.y
+        elif self.direction=="RIGHTUP":
+            self.rect=pygame.Rect(0,0,self.ai_settings.bullet_width,self.ai_settings.bullet_height)
+            self.xcenter+=self.speed_factor
+            self.rect.centerx=self.xcenter
+            self.y-=self.speed_factor
+            self.rect.y=self.y
         elif self.direction=="LEFT":
             self.rect=pygame.Rect(0,0,self.ai_settings.bullet_height,self.ai_settings.bullet_width)
             self.xcenter-=self.speed_factor
             self.rect.centerx=self.xcenter
+            self.rect.y=self.y
+        elif self.direction=="LEFTUP":
+            self.rect=pygame.Rect(0,0,self.ai_settings.bullet_width,self.ai_settings.bullet_height)
+            self.xcenter-=self.speed_factor
+            self.rect.centerx=self.xcenter
+            self.y-=self.speed_factor
             self.rect.y=self.y
 
 
