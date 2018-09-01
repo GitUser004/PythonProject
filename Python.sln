@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2027
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "test", "test\test.pyproj", "{7CB9E6D0-E461-484D-AA91-E7932BD56EDE}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "alien_invasion", "alien_invasion\alien_invasion.pyproj", "{B04773EF-67FE-4313-B47E-7EB360FEDC0D}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "random_walk", "random_walk\random_walk.pyproj", "{3CD1C9DE-785F-4F6C-9A70-BB61A8DEF157}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "die", "die\die.pyproj", "{19BC09B2-FFA4-408C-8878-B0CB4ACC1FE1}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "CSV", "CSV\CSV.pyproj", "{D0EAE1FD-6141-4C78-90F3-E1623B2444F9}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "json", "json\json.pyproj", "{0C82949B-324A-4CFB-B265-871B9BD76785}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "API", "API\API.pyproj", "{FB7363B9-67E7-4673-A261-7F70BC30A84B}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "tcp_client", "tcp_client\tcp_client.pyproj", "{2EBCCF41-6325-4182-AA69-CE0E1B2E9603}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "tcp_server", "tcp_server\tcp_server.pyproj", "{2CE42FDE-BA24-425D-BD37-755B72258A69}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7CB9E6D0-E461-484D-AA91-E7932BD56EDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CB9E6D0-E461-484D-AA91-E7932BD56EDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B04773EF-67FE-4313-B47E-7EB360FEDC0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B04773EF-67FE-4313-B47E-7EB360FEDC0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CD1C9DE-785F-4F6C-9A70-BB61A8DEF157}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CD1C9DE-785F-4F6C-9A70-BB61A8DEF157}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19BC09B2-FFA4-408C-8878-B0CB4ACC1FE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19BC09B2-FFA4-408C-8878-B0CB4ACC1FE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0EAE1FD-6141-4C78-90F3-E1623B2444F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0EAE1FD-6141-4C78-90F3-E1623B2444F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C82949B-324A-4CFB-B265-871B9BD76785}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C82949B-324A-4CFB-B265-871B9BD76785}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB7363B9-67E7-4673-A261-7F70BC30A84B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB7363B9-67E7-4673-A261-7F70BC30A84B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EBCCF41-6325-4182-AA69-CE0E1B2E9603}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EBCCF41-6325-4182-AA69-CE0E1B2E9603}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CE42FDE-BA24-425D-BD37-755B72258A69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CE42FDE-BA24-425D-BD37-755B72258A69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ACEB41FE-D2AC-47DD-BFD3-AA96F6D8D2D2}
+	EndGlobalSection
+EndGlobal
