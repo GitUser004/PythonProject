@@ -2,15 +2,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>7cb9e6d0-e461-484d-aa91-e7932bd56ede</ProjectGuid>
+    <ProjectGuid>92f1907e-615c-4c27-8b9b-d7035528b087</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>day05.py</StartupFile>
+    <StartupFile>replaceFileContent.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
-    <Name>test</Name>
-    <RootNamespace>test</RootNamespace>
+    <Name>replaceFileContent</Name>
+    <RootNamespace>replaceFileContent</RootNamespace>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -21,28 +21,7 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="class.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="day05.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="openFile.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="print.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="staticTest.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="test.py" />
-    <Compile Include="test__name__1.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="test__name__2.py">
-      <SubType>Code</SubType>
-    </Compile>
+    <Compile Include="replaceFileContent.py" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in

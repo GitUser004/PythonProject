@@ -21,6 +21,8 @@ Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "tcp_client", "tcp_client\tc
 EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "tcp_server", "tcp_server\tcp_server.pyproj", "{2CE42FDE-BA24-425D-BD37-755B72258A69}"
 EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "replaceFileContent", "replaceFileContent\replaceFileContent.pyproj", "{92F1907E-615C-4C27-8B9B-D7035528B087}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,8 @@ Global
 		{2EBCCF41-6325-4182-AA69-CE0E1B2E9603}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2CE42FDE-BA24-425D-BD37-755B72258A69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2CE42FDE-BA24-425D-BD37-755B72258A69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92F1907E-615C-4C27-8B9B-D7035528B087}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92F1907E-615C-4C27-8B9B-D7035528B087}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
